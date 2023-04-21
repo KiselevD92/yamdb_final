@@ -32,10 +32,6 @@ jobs:
       run: |
         # запуск проверки проекта по flake8
         python -m flake8
-        # перейти в папку, содержащую manage.py — 
-        #<корневая_папка_infra_actions>/<папка_проекта>/manage.py
-        cd tests/
-        # запустить написанные разработчиком тесты
         pytest
   build_and_push_to_docker_hub:
       name: Push Docker image to Docker Hub
@@ -59,7 +55,7 @@ jobs:
           uses: docker/build-push-action@v2
           with:
             push: true
-            tags: kiselevdv/yamdb:review.v1
+            tags: kiselevdv/api_yamdb:latest
   deploy:
       runs-on: ubuntu-latest
       needs: build_and_push_to_docker_hub
