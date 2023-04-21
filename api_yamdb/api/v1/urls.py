@@ -12,7 +12,6 @@ from .views import (
     UsersViewSet,
 )
 
-
 router = routers.DefaultRouter()
 router.register('titles', TitleViewSet, basename='titles')
 router.register('genres', GenreViewSet, basename='genres')
