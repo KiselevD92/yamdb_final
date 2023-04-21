@@ -1,16 +1,9 @@
 from csv import DictReader
-from django.core.management.base import BaseCommand
 
-from reviews.models import (
-    Category,
-    Comment,
-    Genre,
-    GenreTitle,
-    Review,
-    Title
-)
+from django.core.management.base import BaseCommand
 from users.models import User
 
+from reviews.models import Category, Comment, Genre, GenreTitle, Review, Title
 
 IMPORT_OBJECTS = [
     (Category, 'category.csv'),
