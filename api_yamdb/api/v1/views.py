@@ -1,28 +1,33 @@
 import secrets
 
 from django.conf import settings
+from django.core.mail import send_mail
 from django.db.models import Avg
 from django_filters.rest_framework import DjangoFilterBackend
-from django.core.mail import send_mail
+from rest_framework import filters, status, viewsets
 from rest_framework.decorators import action
+from rest_framework.generics import get_object_or_404
+from rest_framework.pagination import LimitOffsetPagination
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from rest_framework import filters, viewsets, status
-from rest_framework.generics import get_object_or_404
-from rest_framework.pagination import LimitOffsetPagination
-
 from reviews.models import Category, Genre, Review, Title
 from users.models import User
-from .mixins import CreateListDestroy
+
 from .filters import TitleFilter
-from .permissions import AdminOrReadOnly, UserOrReadOnly, IsAdmin
-from .serializers import (CategorySerializer, CommentSerializer,
-                          GenreSerializer, ReviewSerializer,
-                          TitlePostSerializer, TitleSerializer,
-                          RegisterSerializer, TokenSerializer,
-                          UserSerializer
-                          )
+from .mixins import CreateListDestroy
+from .permissions import AdminOrReadOnly, IsAdmin, UserOrReadOnly
+from .serializers import (
+    CategorySerializer,
+    CommentSerializer,
+    GenreSerializer,
+    RegisterSerializer,
+    ReviewSerializer,
+    TitlePostSerializer,
+    TitleSerializer,
+    TokenSerializer,
+    UserSerializer,
+)
 
 
 class TitleViewSet(viewsets.ModelViewSet):
