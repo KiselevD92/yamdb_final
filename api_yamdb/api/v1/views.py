@@ -17,17 +17,10 @@ from users.models import User
 from .filters import TitleFilter
 from .mixins import CreateListDestroy
 from .permissions import AdminOrReadOnly, IsAdmin, UserOrReadOnly
-from .serializers import (
-    CategorySerializer,
-    CommentSerializer,
-    GenreSerializer,
-    RegisterSerializer,
-    ReviewSerializer,
-    TitlePostSerializer,
-    TitleSerializer,
-    TokenSerializer,
-    UserSerializer,
-)
+from .serializers import (CategorySerializer, CommentSerializer,
+                          GenreSerializer, RegisterSerializer,
+                          ReviewSerializer, TitlePostSerializer,
+                          TitleSerializer, TokenSerializer, UserSerializer)
 
 
 class TitleViewSet(viewsets.ModelViewSet):
