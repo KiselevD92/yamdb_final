@@ -82,8 +82,10 @@ kiselevdv/api_yamdb:latest
 ```
 
 ## Данные для входа в админку:
+```bash
 Username: admin
 Password: admin
+```
 
 ## Использованные технологии
 Python 3.7
