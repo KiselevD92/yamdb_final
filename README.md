@@ -7,6 +7,8 @@
 
 ## Инструкции по запуску
 
+### Адрес проекта http://158.160.54.186/
+
 **Как запустить проект:**
 Клонировать репозиторий и перейти в него в командной строке:
 
@@ -76,8 +78,12 @@ docker-compose down -v
 
 Образ на сайте DockerHub
 ```bash
-kiselevdv/yamdb:review.v1
+kiselevdv/api_yamdb:latest
 ```
+
+## Данные для входа в админку:
+Username: admin
+Password: admin
 
 ## Использованные технологии
 Python 3.7
