@@ -1,6 +1,6 @@
 # yamdb_final
 
-![](https://github.com/KiselevD92/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+![Django-app workflow](https://github.com/KiselevD92/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
 ## Описание проекта
 Проект YaMDb собирает отзывы пользователей на произведения.
@@ -13,7 +13,7 @@
 Клонировать репозиторий и перейти в него в командной строке:
 
 ```bash
-@git clone https://github.com/yandex-praktikum/api_yamdb.git
+@git clone https://github.com/KiselevD92/yamdb_final.git
 @cd api_yamdb
 ```
 
