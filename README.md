@@ -1,17 +1,19 @@
 # yamdb_final
 
-![](https://github.com/KiselevD92/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+![Django-app workflow](https://github.com/KiselevD92/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
 ## Описание проекта
 Проект YaMDb собирает отзывы пользователей на произведения.
 
 ## Инструкции по запуску
 
+### Адрес проекта http://158.160.54.186/
+
 **Как запустить проект:**
 Клонировать репозиторий и перейти в него в командной строке:
 
 ```bash
-@git clone https://github.com/yandex-praktikum/api_yamdb.git
+@git clone https://github.com/KiselevD92/yamdb_final.git
 @cd api_yamdb
 ```
 
@@ -76,7 +78,13 @@ docker-compose down -v
 
 Образ на сайте DockerHub
 ```bash
-kiselevdv/yamdb:review.v1
+kiselevdv/api_yamdb:latest
+```
+
+## Данные для входа в админку:
+```bash
+Username: admin
+Password: admin
 ```
 
 ## Использованные технологии
